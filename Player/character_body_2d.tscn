@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=3 uid="uid://dq40i5kajculo"]
+
+[ext_resource type="Script" path="res://Player/character_body_2d.gd" id="1_2skgt"]
+[ext_resource type="Texture2D" uid="uid://c5k6fou6t2smm" path="res://Tech Dungeon Roguelite - Asset Pack (DEMO)/Players/players blue x1.png" id="1_4yvke"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jh4w7"]
+radius = 4.84671
+height = 19.3868
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qojql"]
+atlas = ExtResource("1_4yvke")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05p8t"]
+atlas = ExtResource("1_4yvke")
+region = Rect2(96, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3d64a"]
+atlas = ExtResource("1_4yvke")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myny5"]
+atlas = ExtResource("1_4yvke")
+region = Rect2(32, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0nd8s"]
+atlas = ExtResource("1_4yvke")
+region = Rect2(64, 128, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0i7xv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qojql")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05p8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3d64a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_myny5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0nd8s")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 10.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(-172, 155)
+script = ExtResource("1_2skgt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(188, 469)
+scale = Vector2(-1.65061, 1.71354)
+shape = SubResource("CapsuleShape2D_jh4w7")
+one_way_collision = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(188, 453)
+scale = Vector2(2.19096, 1.99492)
+sprite_frames = SubResource("SpriteFrames_0i7xv")
+animation = &"idle"

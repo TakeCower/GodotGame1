@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://7h7gl1ds6hpd"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Sign" type="Label" parent="."]
+offset_left = 101.0
+offset_top = 120.0
+offset_right = 168.0
+offset_bottom = 148.0
+scale = Vector2(14.7989, 14.7989)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.435473, 0.00033783, 0.496523, 1)
+theme_override_font_sizes/font_size = 20
+text = "Level 1"
