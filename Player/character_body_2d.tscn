@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dq40i5kajculo"]
 
-[ext_resource type="Script" uid="uid://cyxojymifgey5" path="res://Player/character_body_2d.gd" id="1_2skgt"]
+[ext_resource type="Script" path="res://Player/character_body_2d.gd" id="1_2skgt"]
 [ext_resource type="Texture2D" uid="uid://c5k6fou6t2smm" path="res://Tech Dungeon Roguelite - Asset Pack (DEMO)/Players/players blue x1.png" id="1_4yvke"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jh4w7"]
